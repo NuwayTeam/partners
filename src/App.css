@@ -27,3 +27,11 @@
 .ui.list .list>.item>i.icon, .ui.list>.item>i.icon {
   width: 22px;
 }
+
+.ui.list>.item a.header {
+  margin: 10px 0;
+}
+
+.ui.list>.item .description {
+  margin-bottom: 4px;
+}

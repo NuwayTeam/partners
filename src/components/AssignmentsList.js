@@ -13,18 +13,22 @@ export default class AssignmentsList extends Component {
         <List.Content>
           <List.Header as='a'>{item.name}</List.Header>
           <List.Description>{item.description}</List.Description>
-          <List divided>  
+          <List horizontal relaxed>  
             <List.Item>
-              <List.Icon name='users' />
-              <List.Content>{item.role}</List.Content>
-            </List.Item>
-            <List.Item>
-              <List.Icon name='marker' />
-              <List.Content>{item.location}</List.Content>
-            </List.Item>
-            <List.Item>
-              <List.Icon name='mail' />
               <List.Content>
+                <List.Icon name='users' />
+                {item.role}
+              </List.Content>
+            </List.Item>
+            <List.Item>
+              <List.Content>
+                <List.Icon name='marker' />
+                {item.location}
+              </List.Content>
+            </List.Item>
+            <List.Item>
+              <List.Content>
+                <List.Icon name='mail' />
                 <a href={buildEmailLink(item.contact)}>{item.contact}</a>
               </List.Content>
             </List.Item>
@@ -37,7 +41,7 @@ export default class AssignmentsList extends Component {
     return (
       <Segment className="AssignmentList">
         <Header as='h3'>Uppdrag</Header>
-        <List divided relaxed>
+        <List animated divided relaxed>
           {this.items()}
         </List>
       </Segment>
