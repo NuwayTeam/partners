@@ -15,7 +15,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && aws s3 sync build/ s3://partners.nuway.se --delete"
+    "deploy": "npm run build && aws s3 sync build/ s3://partners.nuway.se --delete",
+    "invalidateCache": "aws cloudfront create-invalidation --distribution-id EMKXVWC0CSPWI --paths \"/*\""
   },
   "eslintConfig": {
     "extends": "react-app"
