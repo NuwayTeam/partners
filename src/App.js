@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import { Grid, Header } from 'semantic-ui-react';
-import './App.css';
+import React, { Component } from 'react'
+import { Grid, Header } from 'semantic-ui-react'
+import './App.css'
 
 import { API, graphqlOperation } from 'aws-amplify'
 import { listAssignments } from './graphql/queries'
 import { onCreateAssignment } from './graphql/subscriptions'
 
-import Amplify from 'aws-amplify';
-import aws_exports from './aws-exports';
-import { withAuthenticator } from 'aws-amplify-react';
+import Amplify from 'aws-amplify'
+import aws_exports from './aws-exports'
+import { withAuthenticator } from 'aws-amplify-react'
 
 import AssignmentsList from './components/AssignmentsList'
-import NewAssignment from './components/NewAssignment';
+import NewAssignment from './components/NewAssignment'
 
 Amplify.configure(aws_exports);
 
