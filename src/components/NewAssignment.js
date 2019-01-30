@@ -59,15 +59,15 @@ export default class NewAssignment extends Component {
             </Form.Group>
               <Form.Input fluid label='Kontakt' placeholder='Emailadress till kontaktperson' name='contact' value={this.state.contact} onChange={this.onChange}/>
             <Form.TextArea label='Beskrivning' placeholder='Uppdragsbeskrivning' name='description' value={this.state.description} onChange={this.onChange}/>
-            <Form.Group>
-              <Form.Button loading={this.state.saving} primary disabled={!isValid(this.state)} onClick={this.createAssignment}>Spara</Form.Button>
-              <Form.Button onClick={this.toggleForm}>Stäng</Form.Button>
+            <Form.Group widths='equal'>
+              <Form.Button fluid loading={this.state.saving} primary disabled={!isValid(this.state)} onClick={this.createAssignment}>Spara</Form.Button>
+              <Form.Button fluid onClick={this.toggleForm}>Stäng</Form.Button>
             </Form.Group>
           </Form> :
           <Button animated='fade' primary onClick={this.toggleForm}>
             <Button.Content visible>Nytt uppdrag</Button.Content>
             <Button.Content hidden>
-              <Icon name='plus' />
+              <Icon name='edit outline' />
             </Button.Content>
           </Button>
         }
