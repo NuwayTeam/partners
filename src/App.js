@@ -56,10 +56,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header as='h1'>Nuway partner portal</Header>
+        <Header as='h1'>Nuway partnerportal</Header>
         <Grid centered padded>
           <Grid.Column mobile={16} computer={6}>
-            <NewAssignment />
+            <NewAssignment count={this.state.assignments.length}/>
             <AssignmentsList assignments={this.state.assignments} />
           </Grid.Column>
         </Grid>
