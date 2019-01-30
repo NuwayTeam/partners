@@ -1,0 +1,20 @@
+{
+    "projectName": "partnersapp",
+    "projectPath": "/Users/mikaelfalgard/Documents/nuway/partners/partners-app",
+    "defaultEditor": "code",
+    "frontendHandler": {
+        "javascript": "/Users/mikaelfalgard/.nvm/versions/node/v8.4.0/lib/node_modules/@aws-amplify/cli/node_modules/amplify-frontend-javascript"
+    },
+    "javascript": {
+        "framework": "react",
+        "config": {
+            "SourceDir": "src",
+            "DistributionDir": "build",
+            "BuildCommand": "npm run-script build",
+            "StartCommand": "npm run-script start"
+        }
+    },
+    "providers": {
+        "awscloudformation": "/Users/mikaelfalgard/.nvm/versions/node/v8.4.0/lib/node_modules/@aws-amplify/cli/node_modules/amplify-provider-awscloudformation"
+    }
+}

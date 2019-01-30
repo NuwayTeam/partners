@@ -1,0 +1,124 @@
+type Assignment {
+  id: ID!
+  name: String!
+  description: String
+  open: Boolean
+  city: String
+  role: String
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelAssignmentConnection {
+  items: [Assignment]
+  nextToken: String
+}
+
+input ModelStringFilterInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+}
+
+input ModelIDFilterInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+}
+
+input ModelIntFilterInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  contains: Int
+  notContains: Int
+  between: [Int]
+}
+
+input ModelFloatFilterInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  contains: Float
+  notContains: Float
+  between: [Float]
+}
+
+input ModelBooleanFilterInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelAssignmentFilterInput {
+  id: ModelIDFilterInput
+  name: ModelStringFilterInput
+  description: ModelStringFilterInput
+  open: ModelBooleanFilterInput
+  city: ModelStringFilterInput
+  role: ModelStringFilterInput
+  and: [ModelAssignmentFilterInput]
+  or: [ModelAssignmentFilterInput]
+  not: ModelAssignmentFilterInput
+}
+
+type Query {
+  getAssignment(id: ID!): Assignment
+  listAssignments(filter: ModelAssignmentFilterInput, limit: Int, nextToken: String): ModelAssignmentConnection
+}
+
+input CreateAssignmentInput {
+  id: ID
+  name: String!
+  description: String
+  open: Boolean
+  city: String
+  role: String
+}
+
+input UpdateAssignmentInput {
+  id: ID!
+  name: String
+  description: String
+  open: Boolean
+  city: String
+  role: String
+}
+
+input DeleteAssignmentInput {
+  id: ID
+}
+
+type Mutation {
+  createAssignment(input: CreateAssignmentInput!): Assignment
+  updateAssignment(input: UpdateAssignmentInput!): Assignment
+  deleteAssignment(input: DeleteAssignmentInput!): Assignment
+}
+
+type Subscription {
+  onCreateAssignment: Assignment @aws_subscribe(mutations: ["createAssignment"])
+  onUpdateAssignment: Assignment @aws_subscribe(mutations: ["updateAssignment"])
+  onDeleteAssignment: Assignment @aws_subscribe(mutations: ["deleteAssignment"])
+}
