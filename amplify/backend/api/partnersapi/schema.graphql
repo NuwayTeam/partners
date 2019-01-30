@@ -3,6 +3,7 @@ type Assignment @model {
   name: String!
   description: String
   open: Boolean
-  city: String
+  location: String
   role: String
+  contact: String
 }

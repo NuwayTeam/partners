@@ -3,8 +3,9 @@ type Assignment {
   name: String!
   description: String
   open: Boolean
-  city: String
+  location: String
   role: String
+  contact: String
 }
 
 enum ModelSortDirection {
@@ -77,8 +78,9 @@ input ModelAssignmentFilterInput {
   name: ModelStringFilterInput
   description: ModelStringFilterInput
   open: ModelBooleanFilterInput
-  city: ModelStringFilterInput
+  location: ModelStringFilterInput
   role: ModelStringFilterInput
+  contact: ModelStringFilterInput
   and: [ModelAssignmentFilterInput]
   or: [ModelAssignmentFilterInput]
   not: ModelAssignmentFilterInput
@@ -94,8 +96,9 @@ input CreateAssignmentInput {
   name: String!
   description: String
   open: Boolean
-  city: String
+  location: String
   role: String
+  contact: String
 }
 
 input UpdateAssignmentInput {
@@ -103,8 +106,9 @@ input UpdateAssignmentInput {
   name: String
   description: String
   open: Boolean
-  city: String
+  location: String
   role: String
+  contact: String
 }
 
 input DeleteAssignmentInput {

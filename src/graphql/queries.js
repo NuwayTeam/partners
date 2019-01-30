@@ -7,8 +7,9 @@ export const getAssignment = `query GetAssignment($id: ID!) {
     name
     description
     open
-    city
+    location
     role
+    contact
   }
 }
 `;
@@ -23,8 +24,9 @@ export const listAssignments = `query ListAssignments(
       name
       description
       open
-      city
+      location
       role
+      contact
     }
     nextToken
   }

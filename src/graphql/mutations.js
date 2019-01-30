@@ -7,8 +7,9 @@ export const createAssignment = `mutation CreateAssignment($input: CreateAssignm
     name
     description
     open
-    city
+    location
     role
+    contact
   }
 }
 `;
@@ -18,8 +19,9 @@ export const updateAssignment = `mutation UpdateAssignment($input: UpdateAssignm
     name
     description
     open
-    city
+    location
     role
+    contact
   }
 }
 `;
@@ -29,8 +31,9 @@ export const deleteAssignment = `mutation DeleteAssignment($input: DeleteAssignm
     name
     description
     open
-    city
+    location
     role
+    contact
   }
 }
 `;

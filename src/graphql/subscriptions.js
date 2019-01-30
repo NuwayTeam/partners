@@ -7,8 +7,9 @@ export const onCreateAssignment = `subscription OnCreateAssignment {
     name
     description
     open
-    city
+    location
     role
+    contact
   }
 }
 `;
@@ -18,8 +19,9 @@ export const onUpdateAssignment = `subscription OnUpdateAssignment {
     name
     description
     open
-    city
+    location
     role
+    contact
   }
 }
 `;
@@ -29,8 +31,9 @@ export const onDeleteAssignment = `subscription OnDeleteAssignment {
     name
     description
     open
-    city
+    location
     role
+    contact
   }
 }
 `;
