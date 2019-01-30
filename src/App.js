@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Header } from 'semantic-ui-react'
+import { Grid, Header, Image } from 'semantic-ui-react'
 import './App.css'
 
 import { API, graphqlOperation } from 'aws-amplify'
@@ -12,6 +12,7 @@ import { withAuthenticator } from 'aws-amplify-react'
 
 import AssignmentsList from './components/AssignmentsList'
 import NewAssignment from './components/NewAssignment'
+import logo from './logo-transparent-small.png';
 
 Amplify.configure(aws_exports);
 
@@ -56,7 +57,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header as='h1'>Nuway partnerportal</Header>
+        <Header as='h1'>
+          <Image size='small' src={logo} /> Nuway partnerportal
+        </Header>
         <Grid centered padded>
           <Grid.Column mobile={16} computer={6}>
             <NewAssignment count={this.state.assignments.length}/>
