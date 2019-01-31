@@ -35,3 +35,7 @@
 .ui.list>.item .description {
   margin-bottom: 4px;
 }
+
+.ui.horizontal.relaxed.list>.item:not(:first-child) {
+  padding-left: 0;
+}
